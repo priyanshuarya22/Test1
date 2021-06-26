@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Test1</string>
+    <string name="go">Go</string>
+    <string name="option_1">Option 1</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_3">Option 3</string>
+    <string name="context_menu_1">Context Menu 1</string>
+    <string name="context_menu_2">Context Menu 2</string>
+    <string name="context_menu_3">Context Menu 3</string>
+</resources>
