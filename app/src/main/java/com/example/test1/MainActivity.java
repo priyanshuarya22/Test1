@@ -1,9 +1,11 @@
 package com.example.test1;
 
+import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText et;
     Button b;
     LinearLayout ll;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,9 +83,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         MenuInflater mf = this.getMenuInflater();
+        //selecting the textview
+        tv = (TextView)v;
         //inflate context menu
         mf.inflate(R.menu.context_menu, menu);
         super.onCreateContextMenu(menu, v, menuInfo);
+        //changing color of textview when selected
+        tv.setTextColor(Color.BLUE);
+        //set the text on selected textview on edittext
+        et.setText(tv.getText().toString());
     }
 
     @SuppressLint("SetTextI18n")
